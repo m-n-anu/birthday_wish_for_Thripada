@@ -1,0 +1,218 @@
+/* ==========================================================================
+   Royal Birthday Surprise - Global Styles & Design System
+   Palette: Ivory, Champagne Gold, Pearl White, Blush Pink, Subtle Rose Gold
+   ========================================================================== */
+
+:root {
+  /* Royal Palette */
+  --bg-ivory: #FDFBF7;
+  --bg-pearl: #FAF7F2;
+  --bg-champagne: #F5EFEB;
+  --bg-blush: #FBF0ED;
+  --bg-card: rgba(255, 255, 255, 0.85);
+
+  --gold-primary: #C5A059;
+  --gold-rich: #D4AF37;
+  --gold-light: #F3E5AB;
+  --gold-dark: #997328;
+  --gold-accent: #E5C158;
+  --rose-gold: #C98A7D;
+  --blush-accent: #E8B4B8;
+  --burgundy-accent: #6B1D2F;
+
+  --text-primary: #2D231E;
+  --text-secondary: #5C4D45;
+  --text-muted: #8A7A72;
+  --text-gold: #9B7826;
+
+  /* Shadows */
+  --shadow-soft: 0 10px 30px -10px rgba(197, 160, 89, 0.15);
+  --shadow-royal: 0 20px 45px -15px rgba(110, 80, 40, 0.18), 0 0 20px 2px rgba(212, 175, 55, 0.12);
+  --shadow-glow: 0 0 35px rgba(212, 175, 55, 0.35);
+
+  /* Fonts */
+  --font-serif: 'Cinzel', 'Playfair Display', Georgia, serif;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-script: 'Great Vibes', cursive;
+  --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-body);
+  background-color: var(--bg-ivory);
+  color: var(--text-primary);
+  overflow-x: hidden;
+}
+
+body {
+  background: radial-gradient(circle at 50% 0%, #FFFFFF 0%, #FDFBF7 40%, #F6EFE7 100%);
+  min-height: 100vh;
+  overflow-x: hidden;
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Royal Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF7F2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #E5C158 0%, #C5A059 100%);
+  border-radius: 5px;
+  border: 2px solid #FAF7F2;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B38F3A;
+}
+
+/* Typography Helpers */
+.font-royal-title {
+  font-family: var(--font-serif);
+  letter-spacing: 0.08em;
+}
+
+.font-editorial {
+  font-family: var(--font-display);
+}
+
+.font-script {
+  font-family: var(--font-script);
+}
+
+/* Royal Golden Gradients & Borders */
+.gold-text-gradient {
+  background: linear-gradient(135deg, #B8860B 0%, #D4AF37 40%, #AA7C11 70%, #D4AF37 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.rose-gold-gradient {
+  background: linear-gradient(135deg, #B76E79 0%, #D9A0A7 50%, #C98A7D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.royal-border {
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  box-shadow: inset 0 0 15px rgba(212, 175, 55, 0.08);
+}
+
+.royal-card {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: 20px;
+  box-shadow: var(--shadow-royal);
+  position: relative;
+}
+
+/* Ornamental Corners */
+.ornate-corner {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  pointer-events: none;
+}
+.corner-tl { top: 12px; left: 12px; }
+.corner-tr { top: 12px; right: 12px; transform: scaleX(-1); }
+.corner-bl { bottom: 12px; left: 12px; transform: scaleY(-1); }
+.corner-br { bottom: 12px; right: 12px; transform: scale(-1); }
+
+/* Royal Interactive Buttons */
+.btn-royal {
+  background: linear-gradient(135deg, #DFBA52 0%, #C5A059 50%, #AA7C11 100%);
+  color: #FFFFFF;
+  font-family: var(--font-serif);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 14px 34px;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 10px 25px -5px rgba(197, 160, 89, 0.5), inset 0 1px 2px rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.btn-royal:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 15px 30px -5px rgba(197, 160, 89, 0.65), 0 0 20px rgba(229, 193, 88, 0.4);
+  background: linear-gradient(135deg, #E8C547 0%, #D4AF37 50%, #B8860B 100%);
+}
+
+.btn-royal:active {
+  transform: translateY(1px);
+}
+
+.btn-royal-outline {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
+  color: var(--text-gold);
+  border: 1.5px solid var(--gold-primary);
+  font-family: var(--font-serif);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  padding: 10px 24px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-royal-outline:hover {
+  background: var(--gold-primary);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(197, 160, 89, 0.3);
+}
+
+/* Section Stage Containers */
+.section-stage {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 80px 20px;
+  box-sizing: border-box;
+}
+
+/* Subtle Royal Background Pattern */
+.royal-pattern-bg {
+  background-image: radial-gradient(rgba(212, 175, 55, 0.09) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* Responsive utilities */
+@media (max-width: 768px) {
+  .section-stage {
+    padding: 70px 16px 50px 16px;
+    min-height: auto;
+    min-height: 100svh;
+  }
+}
+

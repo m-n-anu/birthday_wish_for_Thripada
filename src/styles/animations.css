@@ -1,0 +1,180 @@
+/* ==========================================================================
+   Royal Animations & Micro-Interactions
+   ========================================================================== */
+
+/* Diya Flame Flicker */
+@keyframes flameFlicker {
+  0% {
+    transform: scale(1) rotate(-1deg);
+    opacity: 0.95;
+    filter: drop-shadow(0 0 14px rgba(255, 170, 0, 0.85)) drop-shadow(0 -5px 25px rgba(255, 80, 0, 0.6));
+  }
+  25% {
+    transform: scale(1.04, 0.98) rotate(1.5deg);
+    opacity: 1;
+    filter: drop-shadow(0 0 18px rgba(255, 190, 40, 0.95)) drop-shadow(0 -8px 30px rgba(255, 90, 0, 0.7));
+  }
+  50% {
+    transform: scale(0.97, 1.05) rotate(-2deg);
+    opacity: 0.92;
+    filter: drop-shadow(0 0 12px rgba(255, 150, 0, 0.8)) drop-shadow(0 -4px 22px rgba(255, 70, 0, 0.5));
+  }
+  75% {
+    transform: scale(1.02, 1.02) rotate(1deg);
+    opacity: 0.98;
+    filter: drop-shadow(0 0 16px rgba(255, 180, 20, 0.9)) drop-shadow(0 -7px 28px rgba(255, 85, 0, 0.65));
+  }
+  100% {
+    transform: scale(1) rotate(-1deg);
+    opacity: 0.95;
+    filter: drop-shadow(0 0 14px rgba(255, 170, 0, 0.85)) drop-shadow(0 -5px 25px rgba(255, 80, 0, 0.6));
+  }
+}
+
+.animate-flame {
+  animation: flameFlicker 1.8s infinite ease-in-out;
+  transform-origin: bottom center;
+}
+
+/* Diya Glow Halo Pulse */
+@keyframes haloPulse {
+  0%, 100% {
+    opacity: 0.55;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.08);
+  }
+}
+
+.animate-halo {
+  animation: haloPulse 3.5s infinite ease-in-out;
+}
+
+/* Floating Balloon Sway */
+@keyframes balloonDrift {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-12px) rotate(2.5deg);
+  }
+  66% {
+    transform: translateY(-6px) rotate(-2deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+.animate-balloon-sway {
+  animation: balloonDrift 6s infinite ease-in-out;
+}
+
+/* Floating Rising Balloon (Grand finale) */
+@keyframes balloonFloatUp {
+  0% {
+    transform: translateY(110vh) translateX(0) rotate(-4deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.85;
+  }
+  50% {
+    transform: translateY(50vh) translateX(25px) rotate(5deg);
+    opacity: 0.9;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-20vh) translateX(-15px) rotate(-3deg);
+    opacity: 0;
+  }
+}
+
+/* Shimmering Golden Sparkles */
+@keyframes sparkleShimmer {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(0.6) rotate(0deg);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.15) rotate(45deg);
+  }
+}
+
+.animate-sparkle {
+  animation: sparkleShimmer 2.4s infinite ease-in-out;
+}
+
+/* Countdown Flip / Scale Pulse */
+@keyframes countZoomGlow {
+  0% {
+    opacity: 0;
+    transform: scale(0.4) translateY(20px);
+    filter: blur(8px);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+    filter: blur(0px) drop-shadow(0 0 25px rgba(212, 175, 55, 0.8));
+  }
+  75% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.5));
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.25) translateY(-20px);
+    filter: blur(6px);
+  }
+}
+
+.animate-count-zoom {
+  animation: countZoomGlow 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Gentle Float */
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float {
+  animation: floatGentle 4s infinite ease-in-out;
+}
+
+/* Cake Slice Slide to Plate */
+@keyframes sliceServeMotion {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  40% {
+    transform: translate(30px, -40px) scale(1.05) rotate(6deg);
+  }
+  100% {
+    transform: translate(110px, 60px) scale(0.95) rotate(0deg);
+  }
+}
+
+.animate-slice-serve {
+  animation: sliceServeMotion 1.4s cubic-bezier(0.2, 0.9, 0.3, 1) forwards;
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
