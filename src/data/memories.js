@@ -25,14 +25,14 @@ export const memoriesData = [
         src: "/images/memory-01.jpg",
         fallback: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&auto=format&fit=crop&q=80",
         alt: "Two friends on a day out",
-        captionLabel: "I am glad life brought us together."
+        captionLabel: ""
       },
       {
         id: "photo-2",
         src: "/images/memory-02.jpg",
         fallback: "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=800&auto=format&fit=crop&q=80",
         alt: "Friends taking a mirror selfie",
-        captionLabel: "Our friendship feels like home, wherever we are."
+        captionLabel: ""
       }
     ]
   },
@@ -50,14 +50,14 @@ export const memoriesData = [
         src: "/images/memory-03.jpg",
         fallback: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&auto=format&fit=crop&q=80",
         alt: "Friends sharing a close-up selfie",
-        captionLabel: "You make ordinary days brighter."
+        captionLabel: ""
       },
       {
         id: "photo-4",
         src: "/images/memory-04.jpg",
         fallback: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=800&auto=format&fit=crop&q=80",
         alt: "A second candid selfie together",
-        captionLabel: "Distance cannot take away our laughter."
+        captionLabel: ""
       }
     ]
   },
@@ -75,7 +75,7 @@ export const memoriesData = [
         src: "/images/memory-05.jpg",
         fallback: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=900&auto=format&fit=crop&q=80",
         alt: "A proud school award moment",
-        captionLabel: "I will always be proud of you."
+        captionLabel: ""
       }
     ]
   },
@@ -93,14 +93,14 @@ export const memoriesData = [
         src: "/images/memory-06.jpg",
         fallback: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&auto=format&fit=crop&q=80",
         alt: "Two women posing together indoors",
-        captionLabel: "I wish I could celebrate beside you."
+        captionLabel: ""
       },
       {
         id: "photo-7",
         src: "/images/memory-07.jpg",
         fallback: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800&auto=format&fit=crop&q=80",
         alt: "Two friends in a colorful selfie",
-        captionLabel: "I miss sharing little moments with you."
+        captionLabel: ""
       }
     ]
   },
@@ -118,14 +118,14 @@ export const memoriesData = [
         src: "/images/memory-08.jpg",
         fallback: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=800&auto=format&fit=crop&q=80",
         alt: "A friend in a blue sari at an event",
-        captionLabel: "You are part of every happy memory."
+        captionLabel: ""
       },
       {
         id: "photo-9",
         src: "/images/memory-09.jpg",
         fallback: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=800&auto=format&fit=crop&q=80",
         alt: "Friends making art together",
-        captionLabel: "I miss having you close."
+        captionLabel: ""
       }
     ]
   }
